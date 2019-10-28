@@ -45,7 +45,7 @@ img {
 /* containers */
 
 .main-container {
-    width: 95%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -64,9 +64,9 @@ img {
     background-size: cover;
 }
 
-/** MEDIA **/
+/** MEDIA **
 
-@media (min-width: 320px) {
+@media (min-width: px) {
 
     .container-flex {
         flex-direction: row;
