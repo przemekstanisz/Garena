@@ -64,9 +64,9 @@ img {
     background-size: cover;
 }
 
-/** MEDIA **
+/** MEDIA **/
 
-@media (min-width: px) {
+@media (min-width: 700px) {
 
     .container-flex {
         flex-direction: row;
