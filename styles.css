@@ -1,0 +1,104 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Permanent+Marker|Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap');
+
+/* global */
+
+body {
+    font-family: Ubuntu;
+    color: #CFDBD5;
+    background-color: #000000;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+/* typography */
+
+/** CLASS **/
+
+.no-scroll {
+    position: fixed;
+    background: #00000090;
+}
+
+/* navigation */
+
+/* hero */
+
+.hero-features {
+    position: relative;
+    top: 50%;
+ }
+ 
+ .hero-title {
+     margin: 0;
+}
+
+/* footer */
+
+.icon-mobile {
+    margin: 1em;
+}
+
+/* containers */
+
+.main-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.hero-container {
+    height: 100vh;
+    text-align: center;
+    background: url("images/hero.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/** MEDIA **/
+
+@media (min-width: 320px) {
+
+    .container-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .baner1-container {
+        display: flex;
+    }
+
+    .baner1-p-container {
+        width: 50%;
+    }
+
+    .baner1-image {
+        width: 50%;
+    }
+
+    .replace /* img/h2+p change places in baner1b */ {
+        order: -1;
+    }
+
+    .hero-title {
+        font-size: 3.5em;
+    }
+}
+
+
+
