@@ -18,9 +18,10 @@ img {
 }
 /* typography */
 
-h1,
 h2 {
     color: #EBFF0090;
+    text-transform: uppercase;
+    text-align: left;
 }
 
 p {
@@ -29,26 +30,52 @@ p {
 
 /** CLASS **/
 
+/* logo */
+
+.logo {
+    font-family: Anton;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-main {
+    font-size: 3em;
+    color: #FFFFFF90;
+    margin: .5em 0 0 0.75em;
+    padding: 0;
+    text-align: left;
+}
+
+.logo-submain {
+    font-size: 1.5em;
+    color: #FFFFFF50;
+    padding: 0;
+    margin: -1em 0 1.25em 6.2em;
+    text-align: right;
+}
+
+.logo-gymhouse {
+    color: #FFFFFF30;
+}
+
 /* navigation */
 
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     padding: 0;
 }
 
 nav li {
-    margin: .25em 0;
+    margin: .25em .5em; 
 }
 
 nav a {
     text-transform: uppercase;
     font-weight: 500;
     text-decoration: none;
-    color: #CFDBD550;
-    padding: .25em 0;
+    color: #FFFFFF70;
 }
 
 nav a:hover,
@@ -58,23 +85,47 @@ nav a:focus {
 
 /* hero */
 
-.hero-features {
-    text-align: center;
-    position: relative;
-    top: 40%;
- }
- 
- .hero-title {
-     margin: 0;
+.hero-title {
+    font-family: Permanent Marker;   
+    font-size: 3em; 
+    color: #EBFF00;
+    margin: 2em 0 0 0; 
+    padding: 0;
+}
+
+.hero-subtitle {
+    font-weight: 100;
+    font-style: italic;
+    color: #FFFFFF;
+    margin: 0; 
+    padding: 0;
+}
+
+.hero-btn {
+    font-family: Ubuntu; 
+    font-size: 1em;
+    font-weight: 600;
+    color: #FFFFFF70;
+    text-transform: uppercase;
+    background: none;
+    margin: 2em;
+    padding: 1em 4em;
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+}
+
+.hero-btn:hover {
+    color: #000000;
+    background: #FFFFFF70;
 }
 
 /* containers */
 
 .header-container {
-    /*position: fixed;*/
+    position: fixed;
     background: #000000;
+    margin: 0;
 }
-
 .main-container {
     width: 100%;
     margin: 0 auto;
@@ -93,6 +144,13 @@ nav a:focus {
     background-image: url("images/hero.jpg");
     background-blend-mode: multiply;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-features {
+    text-align: center;   
 }
 
 .article-container {
@@ -100,15 +158,12 @@ nav a:focus {
     margin: 0 auto;
 }
 
-.baner1-p-container,
-.baner2-p-container,
-.baner2-p2-container {
+.baner1-p-right-container,
+.baner1-p-left-container,
+.baner2-p2-container,
+.baner2-p-container {
    margin: 2em;
    text-align: justify;
-}
-
-.baner2-p-container {
-    margin-top: 5em;
 }
 
 /* footer */
@@ -119,12 +174,16 @@ nav a:focus {
 
 /** MEDIA **/
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
 
     .container-flex {
         flex-direction: row;
         justify-content: space-between;
         align-content: center;
+    }
+
+    .header-container {
+        align-items: center;
     }
 
     .footer-container {
@@ -136,7 +195,8 @@ nav a:focus {
         display: flex;
     }
 
-    .baner1-p-container {
+    .baner1-p-right-container,
+    .baner1-p-left-container {
         width: 50%;
     }
 
@@ -151,19 +211,37 @@ nav a:focus {
     }
 
     .hero-title {
-        font-size: 3.5em;
+        font-size: 5.5em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25em;
+        color: #FFFFFF90;
     }
 
     nav ul {
         flex-direction: row;
+        margin-right: 2em;
     }
 
     nav li {
-        margin: 0 2em;
+        margin: 0 1em;
     }
 
-    .baner1-p-container {
+    .baner1-p-right-container,
+    .baner1-p-left-container {
         background-color: #FFFFFF10;
+        padding: 1em;
+    }
+
+    .baner1-p-right-container {
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .baner1-p-left-container {
+        margin-right: 0;
+        margin-top: 0;
     }
 }
 
