@@ -8,47 +8,76 @@ body {
     font-family: Ubuntu;
     color: #CFDBD5;
     background-color: #000000;
+    margin: 0;
 }
 
 img {
     max-width: 100%;
     display: block;
+    margin: 0;
 }
 /* typography */
 
-/** CLASS **/
-
-.no-scroll {
-    position: fixed;
-    background: #00000090;
+h1,
+h2 {
+    color: #EBFF0090;
 }
 
+p {
+    color: #FFFFFF70;
+}
+
+/** CLASS **/
+
 /* navigation */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+}
+
+nav li {
+    margin: .25em 0;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    color: #CFDBD550;
+    padding: .25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #FFFFFF;
+}
 
 /* hero */
 
 .hero-features {
+    text-align: center;
     position: relative;
-    top: 50%;
+    top: 40%;
  }
  
  .hero-title {
      margin: 0;
 }
 
-/* footer */
-
-.icon-mobile {
-    margin: 1em;
-}
-
 /* containers */
+
+.header-container {
+    /*position: fixed;*/
+    background: #000000;
+}
 
 .main-container {
     width: 100%;
-    
     margin: 0 auto;
-    border: 1px solid white
 }
 
 .container-flex {
@@ -60,9 +89,32 @@ img {
 
 .hero-container {
     height: 100vh;
-    text-align: center;
-    background: url("images/hero.jpg") no-repeat center center;
+    background-color: #00000090;
+    background-image: url("images/hero.jpg");
+    background-blend-mode: multiply;
     background-size: cover;
+}
+
+.article-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.baner1-p-container,
+.baner2-p-container,
+.baner2-p2-container {
+   margin: 2em;
+   text-align: justify;
+}
+
+.baner2-p-container {
+    margin-top: 5em;
+}
+
+/* footer */
+
+.icon-mobile {
+    margin: 1em;
 }
 
 /** MEDIA **/
@@ -89,7 +141,9 @@ img {
     }
 
     .baner1-image {
-        width: 50%;
+        max-width: 50%;
+        min-width: 50%;
+        max-height: 400px;
     }
 
     .replace /* img/h2+p change places in baner1b */ {
@@ -98,6 +152,18 @@ img {
 
     .hero-title {
         font-size: 3.5em;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        margin: 0 2em;
+    }
+
+    .baner1-p-container {
+        background-color: #FFFFFF10;
     }
 }
 
