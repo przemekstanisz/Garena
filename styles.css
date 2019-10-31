@@ -42,7 +42,7 @@ p {
 .logo-main {
     font-size: 3em;
     color: #FFFFFF90;
-    margin: .5em 0 0 0.75em;
+    margin: .1em 0 0 0.75em;
     padding: 0;
     text-align: left;
 }
@@ -51,7 +51,7 @@ p {
     font-size: 1.5em;
     color: #FFFFFF50;
     padding: 0;
-    margin: -1em 0 1.25em 6.2em;
+    margin: -1em 0 .25em 6.2em;
     text-align: right;
 }
 
@@ -65,11 +65,13 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    margin: 0 0 .5em 0;
     padding: 0;
 }
 
 nav li {
-    margin: .25em .5em; 
+    margin: 0 .5em;
+    padding: 0;
 }
 
 nav a {
@@ -88,7 +90,7 @@ nav a:focus {
 
 .hero-title {
     font-family: Permanent Marker;   
-    font-size: 2.5em; 
+    font-size: 2em; 
     color: #EBFF00;
     margin: 5em 0 0 0; 
     padding: 0;
@@ -256,11 +258,6 @@ nav a:focus {
         display: flex;
     }
 
-    .baner1-p-right-container,
-    .baner1-p-left-container {
-        width: 50%;
-    }
-
     .baner1-image {
         max-width: 50%;
         min-width: 50%;
@@ -298,7 +295,8 @@ nav a:focus {
     .baner1-p-right-container,
     .baner1-p-left-container {
         background-color: #FFFFFF10;
-        padding: 1em;
+        padding: 1em 2em;
+        width: 50%;
     }
 
     .baner1-p-right-container {
