@@ -16,6 +16,7 @@ img {
     display: block;
     margin: 0;
 }
+
 /* typography */
 
 h2 {
@@ -35,14 +36,12 @@ p {
 
 .logo {
     font-family: Anton;
-    margin: 0;
-    padding: 0;
 }
 
 .logo-main {
     font-size: 3em;
     color: #FFFFFF90;
-    margin: .1em 0 0 0.75em;
+    margin: .5em 0 0 .8em;
     padding: 0;
     text-align: left;
 }
@@ -51,39 +50,55 @@ p {
     font-size: 1.5em;
     color: #FFFFFF50;
     padding: 0;
-    margin: -1em 0 .25em 6.2em;
-    text-align: right;
+    margin: -1em 0 1em 6.3em;
+    text-align: left;
 }
 
 .logo-gymhouse {
-    color: #FFFFFF30;
+    color: #FFFFFF30;  
 }
 
-/* navigation */
+/* navigation & hamburger menu */
+
+nav {
+    width: 100%;
+}
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin: 0 0 .5em 0;
+    margin: 0;
     padding: 0;
-}
-
-nav li {
-    margin: 0 .5em;
-    padding: 0;
-}
-
-nav a {
-    text-transform: uppercase;
-    font-weight: 500;
-    text-decoration: none;
-    color: #FFFFFF70;
 }
 
 nav a:hover,
 nav a:focus {
     color: #FFFFFF;
+    background: #000000;
+}
+
+.menu a {
+    font-size: 1.25rem;
+    clear: right;
+    text-decoration: none;
+    margin: 0 10px;
+    line-height: 5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #FFFFFF70;
+}
+
+label {
+    margin: -2.4em 1.4em 0 0;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    display: none;
+    width: 26px;
+    float: right;
+}
+#toggle {
+    display: none;
 }
 
 /* hero */
@@ -119,7 +134,7 @@ nav a:focus {
 
 .hero-btn:hover {
     color: #000000;
-    background: #FFFFFF70;
+    background: #EBFF00;
 }
 
 /* containers */
@@ -127,8 +142,12 @@ nav a:focus {
 .header-container {
     position: fixed;
     background: #0F0F0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0;
 }
+
 .main-container {
     width: 100%;
     margin: 0 auto;
@@ -230,6 +249,35 @@ nav a:focus {
 
 /** MEDIA **/
 
+/* hamburger menu to navbar menu */
+
+@media only screen and (max-width: 768px) {
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+}
+
+/* layout */
+
 @media (min-width: 768px) {
 
     .container-flex {
@@ -239,7 +287,27 @@ nav a:focus {
     }
 
     .header-container {
+        flex-direction: row;
         align-items: center;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        margin: .5em 2em .5em 0;
+        padding: 0;
+    }
+    
+    .menu a {
+        font-size: 1rem;
+        margin: 0 1.5em;
+        line-height: 1.5rem;
+    }
+    
+    nav a:hover,
+    nav a:focus {
+        background: #0F0F0F;
     }
 
     .hero-container {
@@ -283,15 +351,6 @@ nav a:focus {
         color: #FFFFFF90;
     }
 
-    nav ul {
-        flex-direction: row;
-        margin-right: 2em;
-    }
-
-    nav li {
-        margin: 0 1em;
-    }
-
     .baner1-p-right-container,
     .baner1-p-left-container {
         background-color: #FFFFFF10;
@@ -312,6 +371,7 @@ nav a:focus {
     .footer-features {
         max-width: 30%;
     }
+
 }
 
 

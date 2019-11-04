@@ -16,21 +16,27 @@
 
         <header>
                 
-            <div class="main-container container-flex header-container"> <!--logo & navigation-->
+            <div class="main-container header-container"> <!--logo & navigation-->
                 
                 <div class="logo">
                     <h1 class="logo-main">Gladiator</h1>
-                    <p class="logo-submain">arena<span class="logo-gymhouse">gymhouse</span></p>
+                    <p class="logo-submain">arena<span class="logo-gymhouse">gym</span></p>
                 </div>
 
-                <nav>
-                    <ul>
-                        <li><a href="#">siłownie</a></li>
-                        <li><a href="#">członkostwo</a></li>
-                        <li><a href="#">zajęcia</a></li>
-                        <li><a href="#">kontakt</a></li>
+                <nav role="navigation">
+                      
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+
+                    <ul class="menu">
+                        <a href="#"><li>siłownie</li></a>
+                        <a href="#"><li>członkostwo</li></a>
+                        <a href="#"><li>zajęcia</li></a>
+                        <a href="#"><li>kontakt</li></a>
                     </ul>
+
                 </nav>
+                
             </div> <!--logo & navigation END-->
 
         </header>
