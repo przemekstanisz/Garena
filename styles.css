@@ -147,7 +147,7 @@ label {
 .header-container {
     position: fixed;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0);
     backdrop-filter: blur(4px);
     display: flex;
     flex-direction: column;
